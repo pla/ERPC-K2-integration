@@ -1,0 +1,17 @@
+{
+  "name": "ERPC-K2-integration",
+  "version": "0.1.1",
+  "factorio_version": "1.1",
+  "title": " Krastorio 2 integration for Expanded Rocket Payloads Continued",
+  "author": "EvilPLa",
+  "dependencies": [
+    "base >= 1.1.0",
+    "expanded-rocket-payloads-continued >= 1.1.1",
+    "Krastorio2 >= 1.3.0",
+    "? Kux-OrbitalIonCannon",
+    "? SpaceMod >= 1.1.0",
+    "? improved-spacex-ftl",
+    "? omnimatter_science"
+  ],
+  "description": "This mod integrates Krastorio 2 materials into Expanded Rocket Payloads Continued. Optionally SpaceX and Ion Cannon too."
+}
