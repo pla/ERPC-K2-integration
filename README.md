@@ -1,0 +1,2 @@
+This mod integrates Krastorio 2 materials into Expanded Rocket Payloads Continued(ERPC). Optionally Space Extension(SpaceX) and Ion Cannon recipes.
+I got inspired by quindao's Expanded Rocket Payloads Continued Touched by an AngelBob

@@ -1,14 +1,12 @@
 -- data-final-fixes.lua
-
 -- FTL Science needs to be here if "Improved SpaceX FTL research reloaded" is installed, but doesn't hurt if not
 
 if mods["SpaceMod"] and settings.startup["ERPC-K2-integration-integrate-spacex"].value 
 then
-    data.raw.technology["orbital-ai-core"].prerequisites =
-    {
-	  "ftl-propulsion", 
-	  "space-station-assembly",
-	  "ftl-theory-A"
+    data.raw.technology["orbital-ai-core"].prerequisites = {
+      "ftl-propulsion", 
+      "space-station-assembly",
+      "ftl-theory-A"
     }
 	local all_science = util.table.deepcopy(data.raw.technology["kr-singularity-beacon"].unit.ingredients)
 
@@ -21,9 +19,7 @@ then
 	if settings.startup["SpaceX-no-space-sci"].value == false
 	then
 		table.insert(data.raw.technology["ftl-propulsion"].unit.ingredients, {"space-science-pack", 1})
-
 	end
-
 end	
 
 if mods["SpaceMod"] and mods["improved-spacex-ftl"]

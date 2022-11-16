@@ -12,28 +12,26 @@ end
 
 -- Concrete with enriched Iron Ore
 data:extend({
-    {
-        type = "recipe",
-        name = "erpc-k2-s-c-concrete-enriched",
-	    --icons = sc_icon({ type = "item", name = "concrete" }, { type = "item", name = "enriched-iron" }),
-        energy_required = 1.0,
-        enabled = false,
-		category = "smelting-crafting",
-		subgroup = "smelting-crafting",
-		allow_productivity = false,
-		hide_from_player_crafting = true,
-		always_show_made_in = true,
-		ingredients =
-        {
-			{ "enriched-iron", 1 },
-			{ "stone-brick", 10},
-			{type = "fluid", name = "water", amount = 100},
-        },
-        result= "concrete",
-		result_count = 10,
-
+  {
+    type = "recipe",
+    name = "erpc-k2-s-c-concrete-enriched",
+    icons = sc_icon({ type = "item", name = "concrete" }, { type = "item", name = "enriched-iron" }),
+    energy_required = 1.0,
+    enabled = false,
+    category = "smelting-crafting",
+    subgroup = "smelting-crafting",
+    allow_productivity = false,
+    hide_from_player_crafting = true,
+    always_show_made_in = true,
+    ingredients = {
+      { "enriched-iron", 1 },
+      { "stone-brick", 10},
+      {type = "fluid", name = "water", amount = 100},
     },
+    result= "concrete",
+    result_count = 10,
+  },
 })
 
-    table.insert(data.raw.technology["kr-automation"].effects, {type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
-    table.insert(data.raw.technology["extremely-advanced-material-processing"].effects, {type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
+table.insert(data.raw.technology["kr-automation"].effects, {type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
+table.insert(data.raw.technology["extremely-advanced-material-processing"].effects, {type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
