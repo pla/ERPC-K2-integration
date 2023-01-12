@@ -1,10 +1,18 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.1.0
-Date: 2022.08.25
-  Info:
-    - Initial release
+Version: 0.2.0
+Date: 2023-01-12
+  Changes:
+    - Reduced advanced radar in telescope components to 200 was 2000
+    - Probe Data,Ground Telescope and Space Telescope now gives Space Research Data instead of Optimization Tech Cards directly
+    - Fix tech cost of probe-data-processing was changed by Omniscience
+    - Adjusted Ground Telescope energy use
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2022.11.09
   Info:
     - Added recipe for concrete with enriched iron ore
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2022.08.25
+  Info:
+    - Initial release
