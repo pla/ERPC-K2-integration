@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2023-01-23
+  Changes:
+    - Fixed crash with space Exploration
+    - Reduced some ingredience numbers on recipes with Satelite Bus
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2023-01-12
   Changes:

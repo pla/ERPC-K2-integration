@@ -4,7 +4,13 @@ local recipe = data.raw.recipe
 local technology = data.raw.technology
 
 local refurbish_chance = settings.startup["ERPC-K2-integration-refurbish-chance"].value
-local all_science = util.table.deepcopy(technology["kr-singularity-beacon"].unit.ingredients)
+
+local all_science = {}
+if mods["space-exploration"] then
+  all_science = util.table.deepcopy(technology["se-lifesupport-equipment-1"].unit.ingredients)
+else
+  all_science = util.table.deepcopy(technology["kr-singularity-beacon"].unit.ingredients)
+end
 local stone = "stone-brick"
 
 if settings.startup["ERPC-K2-integration-use-k2-tiles"].value
@@ -165,16 +171,17 @@ recipe["satellite-bus"].ingredients = {
   { "low-density-structure", 200 },
   { "rare-metals", 200 }
 }
+if not mods["space-exploration"] then
 
-recipe["satellite-communications"].ingredients = {
-  { "kr-singularity-beacon", 5 },
-  { "vehicle-roboport", 5 },
-  { "advanced-additional-engine", 10 },
-  { "low-density-structure", 20 },
-  { "rocket-control-unit", 10 },
-  { "rare-metals", 200 }
-}
-
+  recipe["satellite-communications"].ingredients = {
+    { "kr-singularity-beacon", 5 },
+    { "vehicle-roboport", 5 },
+    { "advanced-additional-engine", 10 },
+    { "low-density-structure", 20 },
+    { "rocket-control-unit", 10 },
+    { "rare-metals", 200 }
+  }
+end
 recipe["satellite-flight-computer"].ingredients = {
   { "processing-unit", 300 },
   { "rocket-control-unit", 100 },
@@ -208,11 +215,11 @@ recipe["satellite-thruster"].ingredients = {
 
 recipe["shuttle-hull-recipe"].ingredients = {
   { "satellite-battery", 40 },
-  { "satellite-bus", 70 },
+  { "satellite-bus", 30 },
   { "satellite-communications", 20 },
-  { "satellite-flight-computer", 50 },
+  { "satellite-flight-computer", 30 },
   { "satellite-radar", 30 },
-  { "satellite-solar-array", 50 },
+  { "satellite-solar-array", 30 },
   { "plastic-bar", 5000 },
   { "imersium-plate", 5000 },
   { stone, 50000 }
@@ -410,23 +417,23 @@ then
   -- Adjust Recipe  orbital-ion-cannon
   recipe["orbital-ion-cannon"].normal.ingredients = {
     { "satellite-battery", 40 },
-    { "satellite-bus", 70 },
+    { "satellite-bus", 30 },
     { "satellite-communications", 20 },
     { "satellite-flight-computer", 5 },
-    { "satellite-radar", 50 },
-    { "satellite-solar-array", 50 },
-    { "ai-core", 50 },
+    { "satellite-radar", 30 },
+    { "satellite-solar-array", 30 },
+    { "ai-core", 100 },
     { "imersium-plate", 200 },
     { "kr-laser-artillery-turret", 10 }
   }
   recipe["orbital-ion-cannon"].expensive.ingredients = {
-    { "satellite-battery", 40 },
-    { "satellite-bus", 70 },
+    { "satellite-battery", 30 },
+    { "satellite-bus", 30 },
     { "satellite-communications", 20 },
     { "satellite-flight-computer", 5 },
-    { "satellite-radar", 50 },
-    { "satellite-solar-array", 50 },
-    { "ai-core", 50 },
+    { "satellite-radar", 30 },
+    { "satellite-solar-array", 30 },
+    { "ai-core", 100 },
     { "imersium-plate", 200 },
     { "kr-laser-artillery-turret", 10 }
   }

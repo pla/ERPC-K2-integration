@@ -8,7 +8,12 @@ then
     "space-station-assembly",
     "ftl-theory-A"
   }
-  local all_science = util.table.deepcopy(data.raw.technology["kr-singularity-beacon"].unit.ingredients)
+  local all_science = {}
+  if mods["space-exploration"] then
+    all_science = util.table.deepcopy(data.raw.technology["se-lifesupport-equipment-1"].unit.ingredients)
+  else
+    all_science = util.table.deepcopy(data.raw.technology["kr-singularity-beacon"].unit.ingredients)
+  end
 
   data.raw.technology["ftl-theory-A"].unit.ingredients = all_science
 
