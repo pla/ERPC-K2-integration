@@ -373,7 +373,7 @@ if mods["SpaceMod"] and settings.startup["ERPC-K2-integration-integrate-spacex"]
   }
 
   recipe["fuel-cell"].ingredients = {
-    { "dt-fuel", 500 * productionCost },
+    { "dt-fuel", 50 * productionCost },
     { "low-density-structure", 100 * productionCost },
     { "processing-unit", 200 * productionCost },
     { "imersium-plate", 50 * productionCost }
