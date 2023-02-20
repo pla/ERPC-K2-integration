@@ -16,21 +16,16 @@ then
   end
 
   data.raw.technology["ftl-theory-A"].unit.ingredients = all_science
-
-  all_science = util.table.deepcopy(data.raw.technology["rocket-silo"].unit.ingredients)
-
   data.raw.technology["ftl-propulsion"].unit.ingredients = all_science
-
-  if settings.startup["SpaceX-no-space-sci"].value == false
-  then
-    table.insert(data.raw.technology["ftl-propulsion"].unit.ingredients, { "space-science-pack", 1 })
-  end
 end
 
 if mods["SpaceMod"] and mods["improved-spacex-ftl"]
 then
   -- Reinsert the new Science pack from improved-spacex-ftl
   table.insert(data.raw.technology["ftl-propulsion"].unit.ingredients, { "ftl-science-pack", 1 })
+  if settings.startup["ERPC-K2-integration-use-ftl-science"].value then
+    table.insert(data.raw.technology["orbital-autonomous-fabricators"].unit.ingredients, { "ftl-science-pack", 1 })
+  end
 end
 
 -- undo omni science changes for some ERPC techs

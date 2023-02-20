@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 2023-02-20
+  Changes:
+    - Updated README.md
+    - Fixed last SpaceX research using wrong tech cards
+    - Added new setting to use FTL science pack in final ERPC research. Default off
+    - Hide settings that exclude Space Science from SpaceX research
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 2023-02-05
   Changes:
