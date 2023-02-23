@@ -22,9 +22,11 @@ end
 if mods["SpaceMod"] and mods["improved-spacex-ftl"]
 then
   -- Reinsert the new Science pack from improved-spacex-ftl
-  table.insert(data.raw.technology["ftl-propulsion"].unit.ingredients, { "ftl-science-pack", 1 })
+  local ftl_science = util.table.deepcopy(data.raw.technology["ftl-propulsion"].unit.ingredients)
+  table.insert(ftl_science, { "ftl-science-pack", 1 })
+  data.raw.technology["ftl-propulsion"].unit.ingredients = ftl_science
   if settings.startup["ERPC-K2-integration-use-ftl-science"].value then
-    table.insert(data.raw.technology["orbital-autonomous-fabricators"].unit.ingredients, { "ftl-science-pack", 1 })
+    data.raw.technology["orbital-autonomous-fabricators"].unit.ingredients = ftl_science
   end
 end
 
