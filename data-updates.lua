@@ -414,6 +414,7 @@ end
 
 if mods["Kux-OrbitalIonCannon"] and settings.startup["ERPC-K2-integration-integrate-ioncannon"].value
 then
+  if recipe["orbital-ion-cannon"].normal then
   -- Adjust Recipe  orbital-ion-cannon
   recipe["orbital-ion-cannon"].normal.ingredients = {
     { "satellite-battery", 40 },
@@ -426,6 +427,8 @@ then
     { "imersium-plate", 200 },
     { "kr-laser-artillery-turret", 10 }
   }
+end
+if recipe["orbital-ion-cannon"].expensive then
   recipe["orbital-ion-cannon"].expensive.ingredients = {
     { "satellite-battery", 30 },
     { "satellite-bus", 30 },
@@ -437,7 +440,21 @@ then
     { "imersium-plate", 200 },
     { "kr-laser-artillery-turret", 10 }
   }
+end
+if recipe["orbital-ion-cannon"].ingredients then
+  recipe["orbital-ion-cannon"].ingredients = {
+    { "satellite-battery", 40 },
+    { "satellite-bus", 30 },
+    { "satellite-communications", 20 },
+    { "satellite-flight-computer", 5 },
+    { "satellite-radar", 30 },
+    { "satellite-solar-array", 30 },
+    { "ai-core", 100 },
+    { "imersium-plate", 200 },
+    { "kr-laser-artillery-turret", 10 }
+  }
 
+end
   -- Adjust Techtree
   technology["orbital-ion-cannon"].prerequisites = {
     "robot-global-positioning-system-1"
