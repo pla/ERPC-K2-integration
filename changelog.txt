@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 2023-02-23
+  Changes:
+    - Fixed wrongly assigned ftl science
+    - Removed annoying space in front of modname in info.json
+---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2023-02-20
   Changes:
