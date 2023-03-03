@@ -31,10 +31,10 @@ recipe["autonomous-space-mining-drone"].ingredients = {
   { "kr-advanced-assembling-machine", 100 },
   { "kr-electric-mining-drill-mk3", 500 },
   { "rocket-fuel", 200 },
-  { "radioisotope-thermoelectric-generator", 100 },
-  { "satellite-bus", 30 },
+  { "radioisotope-thermoelectric-generator", 50 },
+  { "satellite-bus", 20 },
   { "satellite-communications", 1 },
-  { "satellite-flight-computer", 50 },
+  { "satellite-flight-computer", 20 },
   { "satellite-radar", 10 },
   { "satellite-thruster", 10 },
   { "kr-superior-long-filter-inserter", 100 }
@@ -61,9 +61,9 @@ recipe["orbital-fabricator-component"].ingredients = {
   { "centrifuge", 250 },
   { "kr-advanced-furnace", 500 },
   { "oil-refinery", 50 },
-  { "satellite-bus", 200 },
-  { "satellite-communications", 500 },
-  { "satellite-flight-computer", 250 },
+  { "satellite-bus", 100 },
+  { "satellite-communications", 200 },
+  { "satellite-flight-computer", 50 },
   { "kr-superior-long-filter-inserter", 500 }
 }
 
@@ -214,12 +214,12 @@ recipe["satellite-thruster"].ingredients = {
 }
 
 recipe["shuttle-hull-recipe"].ingredients = {
-  { "satellite-battery", 40 },
-  { "satellite-bus", 30 },
-  { "satellite-communications", 20 },
-  { "satellite-flight-computer", 30 },
-  { "satellite-radar", 30 },
-  { "satellite-solar-array", 30 },
+  { "satellite-battery", 20 },
+  { "satellite-bus", 15 },
+  { "satellite-communications", 10 },
+  { "satellite-flight-computer", 10 },
+  { "satellite-radar", 15 },
+  { "satellite-solar-array", 15 },
   { "plastic-bar", 5000 },
   { "imersium-plate", 5000 },
   { stone, 50000 }
@@ -324,8 +324,8 @@ if mods["SpaceMod"] and settings.startup["ERPC-K2-integration-integrate-spacex"]
 
   recipe["life-support"].ingredients = {
     { "first-aid-kit", 200 * productionCost },
-    { "satellite-battery", 20 * productionCost },
-    { "satellite-bus", 20 * productionCost },
+    { "satellite-battery", 5 * productionCost },
+    { "satellite-bus", 5 * productionCost },
     { "kr-steel-pipe", 200 * productionCost },
     { "low-density-structure", 100 * productionCost },
     { "ai-core", 50 * productionCost },
@@ -343,7 +343,7 @@ if mods["SpaceMod"] and settings.startup["ERPC-K2-integration-integrate-spacex"]
   recipe["drydock-assembly"].ingredients = {
     { "processing-unit", 200 * productionCost },
     { "low-density-structure", 100 * productionCost },
-    { "assembly-robot", 50 * productionCost },
+    { "assembly-robot", 10 * productionCost },
     { "electronic-components", 200 * productionCost },
     { "vehicle-roboport", 10 * productionCost },
     { "ai-core", 50 * productionCost },
@@ -417,7 +417,7 @@ then
   if recipe["orbital-ion-cannon"].normal then
   -- Adjust Recipe  orbital-ion-cannon
   recipe["orbital-ion-cannon"].normal.ingredients = {
-    { "satellite-battery", 40 },
+    { "satellite-battery", 30 },
     { "satellite-bus", 30 },
     { "satellite-communications", 20 },
     { "satellite-flight-computer", 5 },
@@ -430,7 +430,7 @@ then
 end
 if recipe["orbital-ion-cannon"].expensive then
   recipe["orbital-ion-cannon"].expensive.ingredients = {
-    { "satellite-battery", 30 },
+    { "satellite-battery", 40 },
     { "satellite-bus", 30 },
     { "satellite-communications", 20 },
     { "satellite-flight-computer", 5 },
@@ -443,7 +443,7 @@ if recipe["orbital-ion-cannon"].expensive then
 end
 if recipe["orbital-ion-cannon"].ingredients then
   recipe["orbital-ion-cannon"].ingredients = {
-    { "satellite-battery", 40 },
+    { "satellite-battery", 30 },
     { "satellite-bus", 30 },
     { "satellite-communications", 20 },
     { "satellite-flight-computer", 5 },

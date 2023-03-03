@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.4
-Date: 2023-02-23
+Date: 2023-03-03
   Changes:
     - Fixed wrongly assigned ftl science
     - Removed annoying space in front of modname in info.json
+    - Balance: Reduced some more reicpes where ERPC components are used as ingredience
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 2023-02-20
