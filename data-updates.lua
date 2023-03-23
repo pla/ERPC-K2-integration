@@ -31,7 +31,7 @@ recipe["autonomous-space-mining-drone"].ingredients = {
   { "kr-advanced-assembling-machine", 100 },
   { "kr-electric-mining-drill-mk3", 500 },
   { "rocket-fuel", 200 },
-  { "radioisotope-thermoelectric-generator", 50 },
+  { "radioisotope-thermoelectric-generator", 20 },
   { "satellite-bus", 20 },
   { "satellite-communications", 1 },
   { "satellite-flight-computer", 20 },
