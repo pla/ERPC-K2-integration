@@ -7,6 +7,7 @@ Added Krastorio intermediates to almost all the recipes of
 
 *   [Expanded Rocket Payloads Continued](https://mods.factorio.com/mod/expanded-rocket-payloads-continued) short ERPC
 *   [Space Extension Mod (SpaceX)](https://mods.factorio.com/mod/SpaceMod)
+*   [Space Extension Mod (SpaceX) Feoras Fork](https://mods.factorio.com/mod/SpaceModFeorasFork)
 *   [Orbital Ion Cannon](https://mods.factorio.com/mod/Kux-OrbitalIonCannon)
 
 Further correction's applied when used with

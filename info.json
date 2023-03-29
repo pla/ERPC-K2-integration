@@ -1,6 +1,6 @@
 {
   "name": "ERPC-K2-integration",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "factorio_version": "1.1",
   "title": "Krastorio 2 integration for Expanded Rocket Payloads Continued",
   "author": "EvilPLa",
@@ -11,6 +11,7 @@
     "Krastorio2 >= 1.3.0",
     "? Kux-OrbitalIonCannon",
     "? SpaceMod >= 1.1.0",
+    "? SpaceModFeorasFork >= 1.2.2",
     "? improved-spacex-ftl",
     "? omnimatter_science"
   ],

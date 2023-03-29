@@ -304,7 +304,8 @@ data.raw["assembling-machine"]["ground-auto-fabricator"].energy_usage = "4GW"
 data.raw["assembling-machine"]["space-telescope-uplink-station"].energy_usage = "2GW"
 data.raw["assembling-machine"]["ground-telescope"].energy_usage = "2GW"
 
-if mods["SpaceMod"] and settings.startup["ERPC-K2-integration-integrate-spacex"].value then
+if (mods["SpaceMod"] or mods["SpaceModFeorasFork"]) and
+    settings.startup["ERPC-K2-integration-integrate-spacex"].value then
   -- adjust tech tree
   data.raw.technology["fusion-reactor"].prerequisites = {
     "orbital-assembler-power-problem",
