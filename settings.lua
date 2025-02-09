@@ -37,12 +37,5 @@ data:extend(
       order = "e",
       default_value = true
     },
-    {
-      type = "bool-setting",
-      name = "ERPC-K2-integration-use-ftl-science",
-      setting_type = "startup",
-      order = "f",
-      default_value = false
-    },
   }
 )

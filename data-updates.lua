@@ -19,236 +19,239 @@ then
 end
 
 recipe["advanced-assembler"].ingredients = {
-  { "kr-advanced-assembling-machine", 20 },
-  { "processing-unit",                200 },
-  { "concrete",                       400 },
-  { "electronic-components",          200 },
-  { "kr-superior-inserter",           10 },
-  { "imersium-plate",                 400 }
+  { type = "item", name = "kr-advanced-assembling-machine", amount = 20 },
+  { type = "item", name = "processing-unit",             amount = 200 },
+  { type = "item", name = "concrete",                    amount = 400 },
+  { type = "item", name = "electronic-components",       amount = 200 },
+  { type = "item", name = "kr-superior-inserter",        amount = 10 },
+  { type = "item", name = "imersium-plate",              amount = 400 }
 }
 
 recipe["autonomous-space-mining-drone"].ingredients = {
-  { "kr-advanced-assembling-machine",        100 },
-  { "kr-electric-mining-drill-mk3",          500 },
-  { "rocket-fuel",                           200 },
-  { "radioisotope-thermoelectric-generator", 20 },
-  { "satellite-bus",                         20 },
-  { "satellite-communications",              1 },
-  { "satellite-flight-computer",             20 },
-  { "satellite-radar",                       10 },
-  { "satellite-thruster",                    10 },
-  { "kr-superior-long-filter-inserter",      100 }
+  { type = "item", name = "kr-advanced-assembling-machine",     amount = 100 },
+  { type = "item", name = "kr-electric-mining-drill-mk3",       amount = 500 },
+  { type = "item", name = "rocket-fuel",                        amount = 200 },
+  { type = "item", name = "radioisotope-thermoelectric-generator", amount = 20 },
+  { type = "item", name = "satellite-bus",                      amount = 20 },
+  { type = "item", name = "satellite-communications",           amount = 1 },
+  { type = "item", name = "satellite-flight-computer",          amount = 20 },
+  { type = "item", name = "satellite-radar",                    amount = 10 },
+  { type = "item", name = "satellite-thruster",                 amount = 10 },
+  { type = "item", name = "kr-superior-long-inserter",   amount = 100 }
 }
 
 recipe["ground-auto-fabricator"].ingredients = {
-  { "ground-fabricator-component", 10 }
+  { type = "item", name = "ground-fabricator-component", amount = 10 }
 }
 
 recipe["ground-telescope"].ingredients = {
-  { "concrete",              1000 },
-  { "electric-engine-unit",  1000 },
-  { "electronic-components", 1000 },
-  { "processing-unit",       500 },
-  { "telescope-components",  1 },
-  { "imersium-plate",        2000 },
-  { "kr-steel-pipe",         1000 }
+  { type = "item", name = "concrete",           amount = 1000 },
+  { type = "item", name = "electric-engine-unit", amount = 1000 },
+  { type = "item", name = "electronic-components", amount = 1000 },
+  { type = "item", name = "processing-unit",    amount = 500 },
+  { type = "item", name = "telescope-components", amount = 1 },
+  { type = "item", name = "imersium-plate",     amount = 2000 },
+  { type = "item", name = "kr-steel-pipe",      amount = 1000 }
 }
 
 recipe["orbital-fabricator-component"].ingredients = {
-  { "kr-advanced-assembling-machine",   100 },
-  { "kr-advanced-chemical-plant",       100 },
-  { "autonomous-space-mining-drone",    10 },
-  { "centrifuge",                       250 },
-  { "kr-advanced-furnace",              500 },
-  { "oil-refinery",                     50 },
-  { "satellite-bus",                    100 },
-  { "satellite-communications",         200 },
-  { "satellite-flight-computer",        50 },
-  { "kr-superior-long-filter-inserter", 500 }
+  { type = "item", name = "kr-advanced-assembling-machine", amount = 100 },
+  { type = "item", name = "kr-advanced-chemical-plant",   amount = 100 },
+  { type = "item", name = "autonomous-space-mining-drone", amount = 10 },
+  { type = "item", name = "centrifuge",                   amount = 250 },
+  { type = "item", name = "kr-advanced-furnace",          amount = 500 },
+  { type = "item", name = "oil-refinery",                 amount = 50 },
+  { type = "item", name = "satellite-bus",                amount = 100 },
+  { type = "item", name = "satellite-communications",     amount = 200 },
+  { type = "item", name = "satellite-flight-computer",    amount = 50 },
+  { type = "item", name = "kr-superior-long-inserter", amount = 500 }
 }
 
 recipe["radioisotope-thermoelectric-generator"].ingredients = {
-  { "substation",          500 },
-  { "rocket-control-unit", 100 },
-  { "imersium-plate",      100 },
-  { "uranium-fuel-cell",   100 }
+  { type = "item", name = "substation",      amount = 500 },
+  { type = "item", name = "processing-unit", amount = 100 },
+  { type = "item", name = "imersium-plate",  amount = 100 },
+  { type = "item", name = "uranium-fuel-cell", amount = 100 }
 }
 
 
 recipe["refurbish-fabricator-shuttle"].ingredients = {
-  { type = "fluid",                 name = "water", amount = 20000 },
-  { "landed-fabricator-shuttle",    1 },
-  { "orbital-fabricator-component", 1 },
-  { "rocket-fuel",                  2000 },
-  { stone,                          5000 }
+  { type = "fluid", name = "water",                       amount = 20000 },
+  { type = "item",  name = "landed-fabricator-shuttle",   amount = 1 },
+  { type = "item",  name = "orbital-fabricator-component", amount = 1 },
+  { type = "item",  name = "rocket-fuel",                 amount = 2000 },
+  { type = "item",  name = stone,                         amount = 5000 }
 }
 
 recipe["refurbish-fabricator-shuttle"].results = {
   {
+    type = "item",
     name = "fabricator-shuttle",
     amount = 1,
     probability = settings.startup["ERPC-K2-integration-refurbish-not-guaranteed"].value and refurbish_chance or 1
   },
-  { "ground-fabricator-component", 1 },
-  { type = "fluid",                name = "dirty-water", amount = 18000 }
+  { type = "item",  name = "ground-fabricator-component", amount = 1 },
+  { type = "fluid", name = "dirty-water",                amount = 18000 }
 
 }
 
 recipe["refurbish-mining-shuttle"].ingredients = {
-  { type = "fluid",          name = "water", amount = 20000 },
-  { "landed-mining-shuttle", 1 },
-  { "rocket-fuel",           2000 },
-  { stone,                   2000 }
+  { type = "fluid", name = "water",                amount = 20000 },
+  { type = "item",  name = "landed-mining-shuttle", amount = 1 },
+  { type = "item",  name = "rocket-fuel",          amount = 2000 },
+  { type = "item",  name = stone,                  amount = 2000 }
 }
 
 recipe["refurbish-mining-shuttle"].results = {
   {
+    type = "item",
     name = "mining-shuttle",
     amount = 1,
     probability = settings.startup["ERPC-K2-integration-refurbish-not-guaranteed"].value and refurbish_chance or 1
   },
-  { "iron-dropship",   7500 },
-  { "copper-dropship", 10000 },
-  { type = "fluid",    name = "dirty-water", amount = 18000 }
+  { type = "item",  name = "iron-dropship",  amount = 7500 },
+  { type = "item",  name = "copper-dropship", amount = 10000 },
+  { type = "fluid", name = "dirty-water",    amount = 18000 }
 }
 
 recipe["refurbish-space-shuttle"].ingredients = {
-  { type = "fluid",      name = "water", amount = 20000 },
-  { "landed-shuttle",    1 },
-  { "rocket-fuel",       1000 },
-  { "space-lab-payload", 1 },
-  { stone,               1000 }
+  { type = "fluid", name = "water",           amount = 20000 },
+  { type = "item",  name = "landed-shuttle",  amount = 1 },
+  { type = "item",  name = "rocket-fuel",     amount = 1000 },
+  { type = "item",  name = "space-lab-payload", amount = 1 },
+  { type = "item",  name = stone,             amount = 1000 }
 }
 
 recipe["refurbish-space-shuttle"].results = {
-  { "station-science", 2 },
+  { type = "item",  name = "station-science", amount = 2 },
   {
+    type = "item",
     name = "space-shuttle",
     amount = 1,
     probability = settings.startup["ERPC-K2-integration-refurbish-not-guaranteed"].value and refurbish_chance or 1
   },
-  { type = "fluid",    name = "dirty-water", amount = 18000 }
+  { type = "fluid", name = "dirty-water",   amount = 18000 }
 }
 
 recipe["refurbish-spy-shuttle"].ingredients = {
-  { type = "fluid",       name = "water", amount = 20000 },
-  { "landed-spy-shuttle", 1 },
-  { "rocket-fuel",        1000 },
-  { stone,                1000 }
+  { type = "fluid", name = "water",             amount = 20000 },
+  { type = "item",  name = "landed-spy-shuttle", amount = 1 },
+  { type = "item",  name = "rocket-fuel",       amount = 1000 },
+  { type = "item",  name = stone,               amount = 1000 }
 }
 
 recipe["refurbish-spy-shuttle"].results = {
   {
+    type = "item",
     name = "spy-shuttle",
     amount = 1,
     probability = settings.startup["ERPC-K2-integration-refurbish-not-guaranteed"].value and refurbish_chance or 1
   },
-  { "planetary-data", 2 },
-  { type = "fluid",   name = "dirty-water", amount = 18000 }
+  { type = "item",  name = "planetary-data", amount = 2 },
+  { type = "fluid", name = "dirty-water",  amount = 18000 }
 }
 recipe["probe-data-processing"].results = {
-  { "space-research-data", 500 },
+  { type = "item", name = "space-research-data", amount = 500 },
 }
 
 recipe["study-the-stars"].results = {
-  { "space-research-data", 5 },
+  { type = "item", name = "space-research-data", amount = 5 },
 }
 
 recipe["space-study-the-stars"].results = {
-  { "space-research-data", 50 },
+  { type = "item", name = "space-research-data", amount = 50 },
 }
 
 recipe["satellite-battery"].ingredients = {
-  { "electronic-components",  100 },
-  { "lithium-sulfur-battery", 150 },
-  { "rocket-control-unit",    10 },
-  { "power-switch",           1 }
+  { type = "item", name = "electronic-components", amount = 100 },
+  { type = "item", name = "lithium-sulfur-battery", amount = 150 },
+  { type = "item", name = "processing-unit", amount = 10 },
+  { type = "item", name = "power-switch",        amount = 1 }
 }
 
 recipe["satellite-bus"].ingredients = {
-  { "advanced-additional-engine", 50 },
-  { "electronic-components",      1000 },
-  { "low-density-structure",      200 },
-  { "rare-metals",                200 }
+  { type = "item", name = "advanced-additional-engine-equipment", amount = 50 },
+  { type = "item", name = "electronic-components",   amount = 1000 },
+  { type = "item", name = "low-density-structure",   amount = 200 },
+  { type = "item", name = "rare-metals",             amount = 200 }
 }
 if not mods["space-exploration"] then
   recipe["satellite-communications"].ingredients = {
-    { "kr-singularity-beacon",      5 },
-    { "vehicle-roboport",           5 },
-    { "advanced-additional-engine", 10 },
-    { "low-density-structure",      20 },
-    { "rocket-control-unit",        10 },
-    { "rare-metals",                200 }
+    { type = "item", name = "kr-singularity-beacon",   amount = 5 },
+    { type = "item", name = "vehicle-roboport-equipment",        amount = 5 },
+    { type = "item", name = "advanced-additional-engine-equipment", amount = 10 },
+    { type = "item", name = "low-density-structure",   amount = 20 },
+    { type = "item", name = "processing-unit",     amount = 10 },
+    { type = "item", name = "rare-metals",             amount = 200 }
   }
 end
 recipe["satellite-flight-computer"].ingredients = {
-  { "processing-unit",       300 },
-  { "rocket-control-unit",   100 },
-  { "ai-core",               100 },
-  { "electronic-components", 1000 },
-  { "rare-metals",           200 }
+  { type = "item", name = "processing-unit",    amount = 300 },
+  { type = "item", name = "ai-core",            amount = 100 },
+  { type = "item", name = "electronic-components", amount = 1000 },
+  { type = "item", name = "rare-metals",        amount = 200 }
 }
 
 recipe["satellite-radar"].ingredients = {
-  { "advanced-additional-engine", 10 },
-  { "low-density-structure",      20 },
-  { "advanced-radar",             100 },
-  { "rocket-control-unit",        30 }
+  { type = "item", name = "advanced-additional-engine-equipment", amount = 10 },
+  { type = "item", name = "low-density-structure",   amount = 20 },
+  { type = "item", name = "kr-advanced-radar",          amount = 100 },
+  { type = "item", name = "processing-unit",     amount = 30 }
 }
 
 recipe["satellite-solar-array"].ingredients = {
-  { "advanced-additional-engine",         10 },
-  { "electronic-components",              400 },
-  { "low-density-structure",              10 },
-  { "power-switch",                       1 },
-  { "big-imersite-solar-panel-equipment", 10 }
+  { type = "item", name = "advanced-additional-engine-equipment",      amount = 10 },
+  { type = "item", name = "electronic-components",           amount = 400 },
+  { type = "item", name = "low-density-structure",           amount = 10 },
+  { type = "item", name = "power-switch",                    amount = 1 },
+  { type = "item", name = "big-superior-solar-panel-equipment", amount = 10 }
 }
 
 recipe["satellite-thruster"].ingredients = {
-  { "advanced-additional-engine", 50 },
-  { "imersium-plate",             100 },
-  { "low-density-structure",      50 },
-  { "rocket-control-unit",        10 },
-  { "rocket-fuel",                200 }
+  { type = "item", name = "advanced-additional-engine-equipment", amount = 50 },
+  { type = "item", name = "imersium-plate",          amount = 100 },
+  { type = "item", name = "low-density-structure",   amount = 50 },
+  { type = "item", name = "processing-unit",     amount = 10 },
+  { type = "item", name = "rocket-fuel",             amount = 200 }
 }
 
 recipe["shuttle-hull-recipe"].ingredients = {
-  { "satellite-battery",         20 },
-  { "satellite-bus",             15 },
-  { "satellite-communications",  10 },
-  { "satellite-flight-computer", 10 },
-  { "satellite-radar",           15 },
-  { "satellite-solar-array",     15 },
-  { "plastic-bar",               5000 },
-  { "imersium-plate",            5000 },
-  { stone,                       50000 }
+  { type = "item", name = "satellite-battery",      amount = 20 },
+  { type = "item", name = "satellite-bus",          amount = 15 },
+  { type = "item", name = "satellite-communications", amount = 10 },
+  { type = "item", name = "satellite-flight-computer", amount = 10 },
+  { type = "item", name = "satellite-radar",        amount = 15 },
+  { type = "item", name = "satellite-solar-array",  amount = 15 },
+  { type = "item", name = "plastic-bar",            amount = 5000 },
+  { type = "item", name = "imersium-plate",         amount = 5000 },
+  { type = "item", name = stone,                    amount = 50000 }
 }
 
 recipe["space-lab-payload"].ingredients = {
-  { "kr-singularity-lab",        5 },
-  { "satellite-bus",             1 },
-  { "satellite-battery",         4 },
-  { "satellite-communications",  1 },
-  { "satellite-flight-computer", 1 },
-  { "satellite-solar-array",     4 }
+  { type = "item", name = "kr-singularity-lab",     amount = 5 },
+  { type = "item", name = "satellite-bus",          amount = 1 },
+  { type = "item", name = "satellite-battery",      amount = 4 },
+  { type = "item", name = "satellite-communications", amount = 1 },
+  { type = "item", name = "satellite-flight-computer", amount = 1 },
+  { type = "item", name = "satellite-solar-array",  amount = 4 }
 }
 
 recipe["telescope-components"].ingredients = {
-  { "advanced-additional-engine", 50 },
-  { "kr-singularity-lab",         5 },
-  { "steel-plate",                100 },
-  { "advanced-radar",             200 },
-  { "satellite-flight-computer",  10 },
-  { stone,                        10000 },
-  { "rare-metals",                200 }
+  { type = "item", name = "advanced-additional-engine-equipment", amount = 50 },
+  { type = "item", name = "kr-singularity-lab",      amount = 5 },
+  { type = "item", name = "steel-plate",             amount = 100 },
+  { type = "item", name = "kr-advanced-radar",          amount = 200 },
+  { type = "item", name = "satellite-flight-computer", amount = 10 },
+  { type = "item", name = stone,                     amount = 10000 },
+  { type = "item", name = "rare-metals",             amount = 200 }
 }
 
 recipe["erp-lab"].ingredients = {
-  { "glass",               100 },
-  { "kr-singularity-lab",  1 },
-  { "kr-quantum-computer", 10 },
-  { "ai-core",             100 },
-  { "processing-unit",     200 },
+  { type = "item", name = "glass",            amount = 100 },
+  { type = "item", name = "kr-singularity-lab", amount = 1 },
+  { type = "item", name = "kr-quantum-computer", amount = 10 },
+  { type = "item", name = "ai-core",          amount = 100 },
+  { type = "item", name = "processing-unit",  amount = 200 },
 }
 
 -- Adjust Science to K2 cards
@@ -275,29 +278,8 @@ technology["orbital-autonomous-fabricators"].unit.ingredients = all_science
 -- Adjust Techtree
 table.insert(technology["space-shuttle"].prerequisites, "satellite-tracking")
 
--- ERPC Assembler can only craft ERPC items
-data.raw["assembling-machine"]["advanced-assembler"].crafting_categories = { "satellite-crafting" }
-data.raw["assembling-machine"]["advanced-assembler"].fluid_boxes = {
-  {
-    production_type = "input",
-    pipe_picture = assembler3pipepictures(),
-    pipe_covers = pipecoverspictures(),
-    base_area = 10,
-    base_level = -1,
-    pipe_connections = { { type = "input", position = { 0, -2 } } },
-    secondary_draw_orders = { north = -1 }
-  },
-  {
-    production_type = "output",
-    pipe_picture = assembler3pipepictures(),
-    pipe_covers = pipecoverspictures(),
-    base_area = 10,
-    base_level = 1,
-    pipe_connections = { { type = "output", position = { 0, 2 } } },
-    secondary_draw_orders = { south = -1 }
-  },
-  off_when_no_fluid_recipe = true
-}
+-- replace ERPC Assembler with a modern one
+require("assembler")
 
 -- make this more expensive, at least enery wise
 data.raw["assembling-machine"]["ground-auto-fabricator"].energy_usage = "4GW"
@@ -342,79 +324,79 @@ if (mods["SpaceMod"] or mods["SpaceModFeorasFork"]) and
     productionCost = 1
   end
 
-  table.insert(recipe["life-support"].ingredients, { "first-aid-kit", 100 * productionCost })
+  table.insert(recipe["life-support"].ingredients, { type = "item", name = "first-aid-kit", amount = 100 * productionCost })
 
   recipe["life-support"].ingredients = {
-    { "first-aid-kit",         200 * productionCost },
-    { "satellite-battery",     5 * productionCost },
-    { "satellite-bus",         5 * productionCost },
-    { "kr-steel-pipe",         200 * productionCost },
-    { "low-density-structure", 100 * productionCost },
-    { "ai-core",               50 * productionCost },
-    { "imersium-plate",        100 * productionCost }
+    { type = "item", name = "first-aid-kit",      amount = 200 * productionCost },
+    { type = "item", name = "satellite-battery",  amount = 5 * productionCost },
+    { type = "item", name = "satellite-bus",      amount = 5 * productionCost },
+    { type = "item", name = "kr-steel-pipe",      amount = 200 * productionCost },
+    { type = "item", name = "low-density-structure", amount = 100 * productionCost },
+    { type = "item", name = "ai-core",            amount = 50 * productionCost },
+    { type = "item", name = "imersium-plate",     amount = 100 * productionCost }
   }
 
   recipe["assembly-robot"].ingredients = {
-    { "satellite-battery",     2 * productionCost },
-    { "construction-robot",    5 * productionCost },
-    { "electronic-components", 200 * productionCost },
-    { "low-density-structure", 20 * productionCost },
-    { "ai-core",               5 * productionCost }
+    { type = "item", name = "satellite-battery",  amount = 2 * productionCost },
+    { type = "item", name = "construction-robot", amount = 5 * productionCost },
+    { type = "item", name = "electronic-components", amount = 200 * productionCost },
+    { type = "item", name = "low-density-structure", amount = 20 * productionCost },
+    { type = "item", name = "ai-core",            amount = 5 * productionCost }
   }
 
   recipe["drydock-assembly"].ingredients = {
-    { "processing-unit",       200 * productionCost },
-    { "low-density-structure", 100 * productionCost },
-    { "assembly-robot",        10 * productionCost },
-    { "electronic-components", 200 * productionCost },
-    { "vehicle-roboport",      10 * productionCost },
-    { "ai-core",               50 * productionCost },
-    { "imersium-plate",        100 * productionCost }
+    { type = "item", name = "processing-unit",    amount = 200 * productionCost },
+    { type = "item", name = "low-density-structure", amount = 100 * productionCost },
+    { type = "item", name = "assembly-robot",     amount = 10 * productionCost },
+    { type = "item", name = "electronic-components", amount = 200 * productionCost },
+    { type = "item", name = "vehicle-roboport-equipment",   amount = 10 * productionCost },
+    { type = "item", name = "ai-core",            amount = 50 * productionCost },
+    { type = "item", name = "imersium-plate",     amount = 100 * productionCost }
   }
 
   recipe["hull-component"].ingredients = {
-    { "low-density-structure", 250 * productionCost },
-    { "electronic-components", 200 * productionCost },
-    { "imersium-plate",        100 * productionCost }
+    { type = "item", name = "low-density-structure", amount = 250 * productionCost },
+    { type = "item", name = "electronic-components", amount = 200 * productionCost },
+    { type = "item", name = "imersium-plate",     amount = 100 * productionCost }
   }
 
   recipe["protection-field"].ingredients = {
-    { "energy-shield-mk4-equipment", 100 * productionCost },
-    { "low-density-structure",       100 * productionCost },
-    { "electronic-components",       200 * productionCost },
-    { "ai-core",                     50 * productionCost }
+    { type = "item", name = "energy-shield-mk4-equipment", amount = 100 * productionCost },
+    { type = "item", name = "low-density-structure",    amount = 100 * productionCost },
+    { type = "item", name = "electronic-components",    amount = 200 * productionCost },
+    { type = "item", name = "ai-core",                  amount = 50 * productionCost }
   }
 
   recipe["space-thruster"].ingredients = {
-    { "processing-unit",            100 * productionCost },
-    { "low-density-structure",      100 * productionCost },
-    { "advanced-additional-engine", 50 * productionCost },
-    { "electronic-components",      200 * productionCost },
-    { "ai-core",                    50 * productionCost },
-    { "imersium-plate",             100 * productionCost }
+    { type = "item", name = "processing-unit",         amount = 100 * productionCost },
+    { type = "item", name = "low-density-structure",   amount = 100 * productionCost },
+    { type = "item", name = "advanced-additional-engine-equipment", amount = 50 * productionCost },
+    { type = "item", name = "electronic-components",   amount = 200 * productionCost },
+    { type = "item", name = "ai-core",                 amount = 50 * productionCost },
+    { type = "item", name = "imersium-plate",          amount = 100 * productionCost }
   }
 
   recipe["fuel-cell"].ingredients = {
-    { "dt-fuel",               50 * productionCost },
-    { "low-density-structure", 100 * productionCost },
-    { "processing-unit",       200 * productionCost },
-    { "imersium-plate",        50 * productionCost }
+    { type = "item", name = "dt-fuel",            amount = 50 * productionCost },
+    { type = "item", name = "low-density-structure", amount = 100 * productionCost },
+    { type = "item", name = "processing-unit",    amount = 200 * productionCost },
+    { type = "item", name = "imersium-plate",     amount = 50 * productionCost }
   }
 
   recipe["habitation"].ingredients = {
-    { "plastic-bar",           500 * productionCost },
-    { "low-density-structure", 100 * productionCost },
-    { "electronic-components", 200 * productionCost },
-    { "imersium-plate",        100 * productionCost }
+    { type = "item", name = "plastic-bar",       amount = 500 * productionCost },
+    { type = "item", name = "low-density-structure", amount = 100 * productionCost },
+    { type = "item", name = "electronic-components", amount = 200 * productionCost },
+    { type = "item", name = "imersium-plate",    amount = 100 * productionCost }
   }
 
   recipe["command"].ingredients = {
-    { "processing-unit",       200 * productionCost },
-    { "low-density-structure", 100 * productionCost },
-    { "electronic-components", 3000 * productionCost },
-    { "glass",                 200 * productionCost },
-    { "ai-core",               100 * productionCost },
-    { "imersium-plate",        300 * productionCost }
+    { type = "item", name = "processing-unit",    amount = 200 * productionCost },
+    { type = "item", name = "low-density-structure", amount = 100 * productionCost },
+    { type = "item", name = "electronic-components", amount = 3000 * productionCost },
+    { type = "item", name = "glass",              amount = 200 * productionCost },
+    { type = "item", name = "ai-core",            amount = 100 * productionCost },
+    { type = "item", name = "imersium-plate",     amount = 300 * productionCost }
   }
 
   -- Adjust science to K2 cards
@@ -436,44 +418,31 @@ end
 
 if mods["Kux-OrbitalIonCannon"] and settings.startup["ERPC-K2-integration-integrate-ioncannon"].value
 then
-  if recipe["orbital-ion-cannon"].normal then
+  if recipe["orbital-ion-cannon"] then
     -- Adjust Recipe  orbital-ion-cannon
-    recipe["orbital-ion-cannon"].normal.ingredients = {
-      { "satellite-battery",         30 },
-      { "satellite-bus",             30 },
-      { "satellite-communications",  20 },
-      { "satellite-flight-computer", 5 },
-      { "satellite-radar",           30 },
-      { "satellite-solar-array",     30 },
-      { "ai-core",                   100 },
-      { "imersium-plate",            200 },
-      { "kr-laser-artillery-turret", 10 }
-    }
-  end
-  if recipe["orbital-ion-cannon"].expensive then
-    recipe["orbital-ion-cannon"].expensive.ingredients = {
-      { "satellite-battery",         40 },
-      { "satellite-bus",             30 },
-      { "satellite-communications",  20 },
-      { "satellite-flight-computer", 5 },
-      { "satellite-radar",           30 },
-      { "satellite-solar-array",     30 },
-      { "ai-core",                   100 },
-      { "imersium-plate",            200 },
-      { "kr-laser-artillery-turret", 10 }
+    recipe["orbital-ion-cannon"].ingredients = {
+      { type = "item", name = "satellite-battery",      amount = 30 },
+      { type = "item", name = "satellite-bus",          amount = 30 },
+      { type = "item", name = "satellite-communications", amount = 20 },
+      { type = "item", name = "satellite-flight-computer", amount = 5 },
+      { type = "item", name = "satellite-radar",        amount = 30 },
+      { type = "item", name = "satellite-solar-array",  amount = 30 },
+      { type = "item", name = "ai-core",                amount = 100 },
+      { type = "item", name = "imersium-plate",         amount = 200 },
+      { type = "item", name = "kr-laser-artillery-turret", amount = 10 }
     }
   end
   if recipe["orbital-ion-cannon"].ingredients then
     recipe["orbital-ion-cannon"].ingredients = {
-      { "satellite-battery",         30 },
-      { "satellite-bus",             30 },
-      { "satellite-communications",  20 },
-      { "satellite-flight-computer", 5 },
-      { "satellite-radar",           30 },
-      { "satellite-solar-array",     30 },
-      { "ai-core",                   100 },
-      { "imersium-plate",            200 },
-      { "kr-laser-artillery-turret", 10 }
+      { type = "item", name = "satellite-battery",      amount = 30 },
+      { type = "item", name = "satellite-bus",          amount = 30 },
+      { type = "item", name = "satellite-communications", amount = 20 },
+      { type = "item", name = "satellite-flight-computer", amount = 5 },
+      { type = "item", name = "satellite-radar",        amount = 30 },
+      { type = "item", name = "satellite-solar-array",  amount = 30 },
+      { type = "item", name = "ai-core",                amount = 100 },
+      { type = "item", name = "imersium-plate",         amount = 200 },
+      { type = "item", name = "kr-laser-artillery-turret", amount = 10 }
     }
   end
   -- Adjust Techtree

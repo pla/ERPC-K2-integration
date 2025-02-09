@@ -10,7 +10,4 @@ if mods["SpaceModFeorasFork"] then
   data.raw["bool-setting"]["SpaceX-classic-mode"].forced_value  = false
   data.raw["bool-setting"]["SpaceX-classic-mode"].hidden = true
 end
-if mods["improved-spacex-ftl"] then
-  data.raw["bool-setting"]["improved-ftl-space"].forced_value  = true
-  data.raw["bool-setting"]["improved-ftl-space"].hidden = true
-end
+

@@ -32,25 +32,3 @@ then
     table.insert(data.raw.technology["orbital-ai-core"].prerequisites,"space-cartography")
   end
 end
-
-
-if (mods["SpaceMod"] or mods["SpaceModFeorasFork"]) and mods["improved-spacex-ftl"]
-then
-  -- Reinsert the new Science pack from improved-spacex-ftl
-  local ftl_science = util.table.deepcopy(data.raw.technology["ftl-propulsion"].unit.ingredients)
-  table.insert(ftl_science, { "ftl-science-pack", 1 })
-  data.raw.technology["ftl-propulsion"].unit.ingredients = ftl_science
-  if settings.startup["ERPC-K2-integration-use-ftl-science"].value then
-    data.raw.technology["orbital-autonomous-fabricators"].unit.ingredients = ftl_science
-  end
-end
-
--- undo omni science changes for some ERPC techs
-if mods["omnimatter_science"]
-then
-  data.raw.technology["extremely-advanced-rocket-payloads"].unit.count = 100
-  data.raw.technology["vacuum-smelting"].unit.count = 1000
-  data.raw.technology["space-mining-theory"].unit.count = 100
-  data.raw.technology["space-station-assembly"].unit.count = 400
-  data.raw.technology["orbital-ai-core"].unit.count = 2500
-end

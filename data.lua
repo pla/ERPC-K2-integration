@@ -24,14 +24,15 @@ data:extend({
     hide_from_player_crafting = true,
     always_show_made_in = true,
     ingredients = {
-      { "enriched-iron", 1 },
-      { "stone-brick", 10},
-      {type = "fluid", name = "water", amount = 100},
+      { type = "item",  name = "enriched-iron", amount = 1 },
+      { type = "item",  name = "stone-brick",  amount = 10 },
+      { type = "fluid", name = "water",        amount = 100 },
     },
-    result= "concrete",
-    result_count = 10,
+    results = { { type = "item", name = "concrete", amount = 10 } },
   },
 })
 
-table.insert(data.raw.technology["kr-automation"].effects, {type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
-table.insert(data.raw.technology["extremely-advanced-material-processing"].effects, {type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
+table.insert(data.raw.technology["kr-automation"].effects,
+  { type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
+table.insert(data.raw.technology["extremely-advanced-material-processing"].effects,
+  { type = "unlock-recipe", recipe = "erpc-k2-s-c-concrete-enriched" })
