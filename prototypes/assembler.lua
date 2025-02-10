@@ -18,6 +18,8 @@ assembler_tech.icon_size = 640
 -- entity
 local assembler = data.raw["assembling-machine"]["advanced-assembler"]
 assembler.icon = "__ERPC-K2-integration__/graphics/assembler/assembler-icon.png"
+assembler.icon_size = 64
+
 assembler.crafting_categories = { "satellite-crafting" }
 
 assembler.collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } }
