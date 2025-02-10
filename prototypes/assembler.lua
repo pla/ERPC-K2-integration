@@ -20,6 +20,7 @@ local assembler = data.raw["assembling-machine"]["advanced-assembler"]
 assembler.icon = "__ERPC-K2-integration__/graphics/assembler/assembler-icon.png"
 assembler.icon_size = 64
 
+assembler.flags = {"placeable-neutral", "player-creation"}
 assembler.crafting_categories = { "satellite-crafting" }
 
 assembler.collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } }
@@ -94,11 +95,11 @@ assembler.graphics_set = {
 assembler.fluid_boxes =
 {
   {
-    production_type = "input",
+    production_type = "output",
     pipe_picture = assembler2pipepictures(),
     pipe_covers = pipecoverspictures(),
     volume = 100,
-    pipe_connections = { { flow_direction = "input", direction = defines.direction.north --[[@as data.Direction]], position = { 2, -2 } } },
+    pipe_connections = { { flow_direction = "output", direction = defines.direction.north --[[@as data.Direction]], position = { 0, -2 } } },
     secondary_draw_orders = { north = -1 }
   },
   {
