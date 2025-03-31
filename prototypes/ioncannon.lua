@@ -19,8 +19,8 @@ then
       { type = "item", name = "satellite-flight-computer", amount = 5 },
       { type = "item", name = "satellite-radar",           amount = 30 },
       { type = "item", name = "satellite-solar-array",     amount = 30 },
-      { type = "item", name = "ai-core",                   amount = 100 },
-      { type = "item", name = "imersium-plate",            amount = 200 },
+      { type = "item", name = "kr-ai-core",                   amount = 100 },
+      { type = "item", name = "kr-imersium-plate",            amount = 200 },
       { type = "item", name = "kr-laser-artillery-turret", amount = 10 }
     }
   end
@@ -32,8 +32,8 @@ then
       { type = "item", name = "satellite-flight-computer", amount = 5 },
       { type = "item", name = "satellite-radar",           amount = 30 },
       { type = "item", name = "satellite-solar-array",     amount = 30 },
-      { type = "item", name = "ai-core",                   amount = 100 },
-      { type = "item", name = "imersium-plate",            amount = 200 },
+      { type = "item", name = "kr-ai-core",                   amount = 100 },
+      { type = "item", name = "kr-imersium-plate",            amount = 200 },
       { type = "item", name = "kr-laser-artillery-turret", amount = 10 }
     }
   end
