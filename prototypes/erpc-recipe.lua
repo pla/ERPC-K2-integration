@@ -86,7 +86,7 @@ recipe["refurbish-fabricator-shuttle"].results = {
         1 --[[@as double]]
   },
   { type = "item",  name = "ground-fabricator-component", amount = 1 },
-  { type = "fluid", name = "dirty-water",                 amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",                 amount = 18000 }
 
 }
 
@@ -107,7 +107,7 @@ recipe["refurbish-mining-shuttle"].results = {
   },
   { type = "item",  name = "iron-dropship",   amount = 7500 },
   { type = "item",  name = "copper-dropship", amount = 10000 },
-  { type = "fluid", name = "dirty-water",     amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",     amount = 18000 }
 }
 
 recipe["refurbish-space-shuttle"].ingredients = {
@@ -127,7 +127,7 @@ recipe["refurbish-space-shuttle"].results = {
     probability = settings.startup["ERPC-K2-integration-refurbish-not-guaranteed"].value and refurbish_chance or
         1 --[[@as double]]
   },
-  { type = "fluid", name = "dirty-water",     amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",     amount = 18000 }
 }
 
 recipe["refurbish-spy-shuttle"].ingredients = {
@@ -146,7 +146,7 @@ recipe["refurbish-spy-shuttle"].results = {
         1 --[[@as double]]
   },
   { type = "item",  name = "planetary-data", amount = 2 },
-  { type = "fluid", name = "dirty-water",    amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",    amount = 18000 }
 }
 recipe["probe-data-processing"].results = {
   { type = "item", name = "kr-space-research-data", amount = 500 },

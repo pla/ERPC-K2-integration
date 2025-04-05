@@ -86,7 +86,7 @@ if ( mods["SpaceModFeorasFork"]) and
   }
   
   recipe["space-oxygen-barrel"].ingredients = {
-    { type = "fluid", name = "oxygen",       amount = 50 * productionCost },
+    { type = "fluid", name = "kr-oxygen",       amount = 50 * productionCost },
     { type = "item", name = "barrel", amount = 1 * productionCost },
   }
   recipe["space-oxygen-barrel"].category = "crafting-with-fluid"
