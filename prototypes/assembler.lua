@@ -112,3 +112,16 @@ assembler.fluid_boxes =
   },
 
 }
+
+assembler.circuit_wire_max_distance = default_circuit_wire_max_distance
+assembler.circuit_connector = circuit_connector_definitions["centrifuge"]
+-- assembler.circuit_connector = circuit_connector_definitions.create_vector
+-- (
+--   universal_connector_template,
+--   {
+--     { variation = 17, main_offset = util.by_pixel(-45, -29.5), shadow_offset = util.by_pixel(48.5, 11), show_shadow = true },
+--     { variation = 17, main_offset = util.by_pixel(29.5, -24), shadow_offset = util.by_pixel(81, 53), show_shadow = true },
+--     { variation = 17, main_offset = util.by_pixel(29.5, -24), shadow_offset = util.by_pixel(82.5, 65.5), show_shadow = true },
+--     { variation = 17, main_offset = util.by_pixel(-8, -35.5), shadow_offset = util.by_pixel(86.5, 77.5), show_shadow = true }
+--   }
+-- )
