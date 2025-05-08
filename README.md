@@ -12,4 +12,6 @@ Added Krastorio intermediates to almost all the recipes of
 All mods except ERPC are optional.
 Space X needs to be configured before starting your save.
 
+Assembler and Lab Graphics by [Hurricane064](https://mods.factorio.com/user/Hurricane046) thank you for making them available
+
 This Mod is inspired by quindao's [Expanded Rocket Payloads Continued Touched by an AngelBob](https://mods.factorio.com/mod/ERPCTbaAB)
