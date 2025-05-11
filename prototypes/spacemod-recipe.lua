@@ -40,6 +40,10 @@ if ( mods["SpaceModFeorasFork"]) and
     { type = "item", name = "kr-imersium-plate",             amount = 100 * productionCost }
   }
 
+  recipe["fusion-reactor"].ingredients = {
+    { type = "item", name = "kr-fusion-reactor-equipment",        amount = 100 * productionCost }
+  }
+
   recipe["hull-component"].ingredients = {
     { type = "item", name = "low-density-structure", amount = 250 * productionCost },
     { type = "item", name = "kr-electronic-components", amount = 200 * productionCost },
