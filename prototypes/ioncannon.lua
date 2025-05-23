@@ -19,8 +19,8 @@ then
       { type = "item", name = "satellite-flight-computer", amount = 5 },
       { type = "item", name = "satellite-radar",           amount = 30 },
       { type = "item", name = "satellite-solar-array",     amount = 30 },
-      { type = "item", name = "kr-ai-core",                   amount = 100 },
-      { type = "item", name = "kr-imersium-plate",            amount = 200 },
+      { type = "item", name = "kr-ai-core",                amount = 100 },
+      { type = "item", name = "kr-imersium-plate",         amount = 200 },
       { type = "item", name = "kr-laser-artillery-turret", amount = 10 }
     }
   end
@@ -32,8 +32,8 @@ then
       { type = "item", name = "satellite-flight-computer", amount = 5 },
       { type = "item", name = "satellite-radar",           amount = 30 },
       { type = "item", name = "satellite-solar-array",     amount = 30 },
-      { type = "item", name = "kr-ai-core",                   amount = 100 },
-      { type = "item", name = "kr-imersium-plate",            amount = 200 },
+      { type = "item", name = "kr-ai-core",                amount = 100 },
+      { type = "item", name = "kr-imersium-plate",         amount = 200 },
       { type = "item", name = "kr-laser-artillery-turret", amount = 10 }
     }
   end
@@ -47,4 +47,13 @@ then
   technology["orbital-ion-cannon"].unit.count = 20000
   technology["auto-targeting"].unit.ingredients = all_science
   technology["auto-targeting"].unit.count = 25000
+  technology["orbital-ion-cannon-area-fire"].unit.ingredients = all_science
+  technology["orbital-ion-cannon-area-fire"].unit.count = 30000
+  -- Hide SA content that may be visible
+  if technology["orbital-ion-cannon-mk2"] then
+    technology["orbital-ion-cannon-mk2"].hidden = true
+    technology["orbital-ion-cannon-mk2-upgrade"].hidden = true
+    data.raw.item["orbital-ion-cannon-mk2"].hidden = true
+    recipe["orbital-ion-cannon-mk2"].hidden = true
+  end
 end
