@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
-Date: 2025-05-11
+Date: 2025-05-23
   Changes:
     - Changed Fusion reactor, to K2 fusion reactor equipment
+    - Added optional dependency for Rocket Silo Stats
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 2025-05-08
