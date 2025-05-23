@@ -11,6 +11,7 @@
     "expanded-rocket-payloads-continued >= 2.0.4",
     "? SpaceModFeorasFork >= 1.3.0",
     "? Kux-OrbitalIonCannon",
+    "? rocket-silo-stats",
     "! space-age",
     "! quality"
   ],
