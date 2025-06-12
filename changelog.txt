@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: ????
+Date: 2025-06-12
   Changes:
+    - Changed subgroup sorting for optimal recipe selection when auto crafting
+    - Changed overload_multiplier to 1 for expensive recipes
+    - Reduced maximum animation speed for the Advanced Assembler(visual change)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 2025-05-23
