@@ -16,11 +16,12 @@ recipe["advanced-assembler"].ingredients = {
   { type = "item", name = "kr-advanced-assembling-machine", amount = 20 },
   { type = "item", name = "processing-unit",                amount = 200 },
   { type = "item", name = "concrete",                       amount = 400 },
-  { type = "item", name = "kr-electronic-components",          amount = 200 },
+  { type = "item", name = "kr-electronic-components",       amount = 200 },
   { type = "item", name = "kr-superior-inserter",           amount = 10 },
-  { type = "item", name = "kr-imersium-plate",                 amount = 400 }
+  { type = "item", name = "kr-imersium-plate",              amount = 400 }
 }
-
+recipe["autonomous-space-mining-drone"].order = "c"
+recipe["autonomous-space-mining-drone"].overload_multiplier = 1
 recipe["autonomous-space-mining-drone"].ingredients = {
   { type = "item", name = "kr-advanced-assembling-machine",        amount = 100 },
   { type = "item", name = "kr-electric-mining-drill-mk3",          amount = 500 },
@@ -34,20 +35,23 @@ recipe["autonomous-space-mining-drone"].ingredients = {
   { type = "item", name = "kr-superior-long-inserter",             amount = 100 }
 }
 
+recipe["ground-auto-fabricator"].overload_multiplier = 1
 recipe["ground-auto-fabricator"].ingredients = {
   { type = "item", name = "ground-fabricator-component", amount = 10 }
 }
 
+recipe["ground-telescope"].overload_multiplier = 1
 recipe["ground-telescope"].ingredients = {
-  { type = "item", name = "concrete",              amount = 1000 },
-  { type = "item", name = "electric-engine-unit",  amount = 1000 },
+  { type = "item", name = "concrete",                 amount = 1000 },
+  { type = "item", name = "electric-engine-unit",     amount = 1000 },
   { type = "item", name = "kr-electronic-components", amount = 1000 },
-  { type = "item", name = "processing-unit",       amount = 500 },
-  { type = "item", name = "telescope-components",  amount = 1 },
+  { type = "item", name = "processing-unit",          amount = 500 },
+  { type = "item", name = "telescope-components",     amount = 1 },
   { type = "item", name = "kr-imersium-plate",        amount = 2000 },
-  { type = "item", name = "kr-steel-pipe",         amount = 1000 }
+  { type = "item", name = "kr-steel-pipe",            amount = 1000 }
 }
 
+recipe["orbital-fabricator-component"].overload_multiplier = 1
 recipe["orbital-fabricator-component"].ingredients = {
   { type = "item", name = "kr-advanced-assembling-machine", amount = 100 },
   { type = "item", name = "kr-advanced-chemical-plant",     amount = 100 },
@@ -64,11 +68,13 @@ recipe["orbital-fabricator-component"].ingredients = {
 recipe["radioisotope-thermoelectric-generator"].ingredients = {
   { type = "item", name = "substation",        amount = 500 },
   { type = "item", name = "processing-unit",   amount = 100 },
-  { type = "item", name = "kr-imersium-plate",    amount = 100 },
+  { type = "item", name = "kr-imersium-plate", amount = 100 },
   { type = "item", name = "uranium-fuel-cell", amount = 100 }
 }
 
 
+recipe["refurbish-fabricator-shuttle"].overload_multiplier = 1
+recipe["refurbish-fabricator-shuttle"].order = "r"
 recipe["refurbish-fabricator-shuttle"].ingredients = {
   { type = "fluid", name = "water",                        amount = 20000 },
   { type = "item",  name = "landed-fabricator-shuttle",    amount = 1 },
@@ -86,10 +92,12 @@ recipe["refurbish-fabricator-shuttle"].results = {
         1 --[[@as double]]
   },
   { type = "item",  name = "ground-fabricator-component", amount = 1 },
-  { type = "fluid", name = "kr-dirty-water",                 amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",              amount = 18000 }
 
 }
 
+recipe["refurbish-mining-shuttle"].overload_multiplier = 1
+recipe["refurbish-mining-shuttle"].order = "r"
 recipe["refurbish-mining-shuttle"].ingredients = {
   { type = "fluid", name = "water",                 amount = 20000 },
   { type = "item",  name = "landed-mining-shuttle", amount = 1 },
@@ -107,9 +115,11 @@ recipe["refurbish-mining-shuttle"].results = {
   },
   { type = "item",  name = "iron-dropship",   amount = 7500 },
   { type = "item",  name = "copper-dropship", amount = 10000 },
-  { type = "fluid", name = "kr-dirty-water",     amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",  amount = 18000 }
 }
 
+recipe["refurbish-space-shuttle"].overload_multiplier = 1
+recipe["refurbish-space-shuttle"].order = "r"
 recipe["refurbish-space-shuttle"].ingredients = {
   { type = "fluid", name = "water",             amount = 20000 },
   { type = "item",  name = "landed-shuttle",    amount = 1 },
@@ -127,9 +137,11 @@ recipe["refurbish-space-shuttle"].results = {
     probability = settings.startup["ERPC-K2-integration-refurbish-not-guaranteed"].value and refurbish_chance or
         1 --[[@as double]]
   },
-  { type = "fluid", name = "kr-dirty-water",     amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water",  amount = 18000 }
 }
 
+recipe["refurbish-spy-shuttle"].overload_multiplier = 1
+recipe["refurbish-spy-shuttle"].order = "r"
 recipe["refurbish-spy-shuttle"].ingredients = {
   { type = "fluid", name = "water",              amount = 20000 },
   { type = "item",  name = "landed-spy-shuttle", amount = 1 },
@@ -146,8 +158,17 @@ recipe["refurbish-spy-shuttle"].results = {
         1 --[[@as double]]
   },
   { type = "item",  name = "planetary-data", amount = 2 },
-  { type = "fluid", name = "kr-dirty-water",    amount = 18000 }
+  { type = "fluid", name = "kr-dirty-water", amount = 18000 }
 }
+
+data.raw["item-subgroup"]["shuttle-processies"].order = "f-6"
+data.raw["item-subgroup"]["space-mining"].order = "e-5"
+
+recipe["repurpose-mining-shuttle"].order = "r"
+recipe["repurpose-space-shuttle"].order = "r"
+recipe["repurpose-fabricator-shuttle"].order = "r"
+recipe["repurpose-spy-shuttle"].order = "r"
+
 recipe["probe-data-processing"].results = {
   { type = "item", name = "kr-space-research-data", amount = 500 },
 }
@@ -163,28 +184,30 @@ recipe["space-study-the-stars"].results = {
 recipe["satellite-battery"].ingredients = {
   { type = "item", name = "kr-electronic-components",  amount = 100 },
   { type = "item", name = "kr-lithium-sulfur-battery", amount = 150 },
-  { type = "item", name = "processing-unit",        amount = 10 },
-  { type = "item", name = "power-switch",           amount = 1 }
+  { type = "item", name = "processing-unit",           amount = 10 },
+  { type = "item", name = "power-switch",              amount = 1 }
 }
 
 recipe["satellite-bus"].ingredients = {
   { type = "item", name = "kr-advanced-additional-engine-equipment", amount = 50 },
   { type = "item", name = "kr-electronic-components",                amount = 1000 },
-  { type = "item", name = "low-density-structure",                amount = 200 },
+  { type = "item", name = "low-density-structure",                   amount = 200 },
   { type = "item", name = "kr-rare-metals",                          amount = 200 }
 }
+
 if not mods["space-exploration"] then
   recipe["satellite-communications"].ingredients = {
-    { type = "item", name = "kr-singularity-beacon",                amount = 5 },
+    { type = "item", name = "kr-singularity-beacon",                   amount = 5 },
     { type = "item", name = "kr-vehicle-roboport-equipment",           amount = 5 },
     { type = "item", name = "kr-advanced-additional-engine-equipment", amount = 10 },
-    { type = "item", name = "low-density-structure",                amount = 20 },
-    { type = "item", name = "processing-unit",                      amount = 10 },
+    { type = "item", name = "low-density-structure",                   amount = 20 },
+    { type = "item", name = "processing-unit",                         amount = 10 },
     { type = "item", name = "kr-rare-metals",                          amount = 200 }
   }
 end
+
 recipe["satellite-flight-computer"].ingredients = {
-  { type = "item", name = "processing-unit",       amount = 300 },
+  { type = "item", name = "processing-unit",          amount = 300 },
   { type = "item", name = "kr-ai-core",               amount = 100 },
   { type = "item", name = "kr-electronic-components", amount = 1000 },
   { type = "item", name = "kr-rare-metals",           amount = 200 }
@@ -192,27 +215,30 @@ recipe["satellite-flight-computer"].ingredients = {
 
 recipe["satellite-radar"].ingredients = {
   { type = "item", name = "kr-advanced-additional-engine-equipment", amount = 10 },
-  { type = "item", name = "low-density-structure",                amount = 20 },
-  { type = "item", name = "kr-advanced-radar",                    amount = 100 },
-  { type = "item", name = "processing-unit",                      amount = 30 }
+  { type = "item", name = "low-density-structure",                   amount = 20 },
+  { type = "item", name = "kr-advanced-radar",                       amount = 100 },
+  { type = "item", name = "processing-unit",                         amount = 30 }
 }
 
 recipe["satellite-solar-array"].ingredients = {
   { type = "item", name = "kr-advanced-additional-engine-equipment", amount = 10 },
   { type = "item", name = "kr-electronic-components",                amount = 400 },
-  { type = "item", name = "low-density-structure",                amount = 10 },
-  { type = "item", name = "power-switch",                         amount = 1 },
+  { type = "item", name = "low-density-structure",                   amount = 10 },
+  { type = "item", name = "power-switch",                            amount = 1 },
   { type = "item", name = "kr-big-superior-solar-panel-equipment",   amount = 10 }
 }
 
 recipe["satellite-thruster"].ingredients = {
   { type = "item", name = "kr-advanced-additional-engine-equipment", amount = 50 },
   { type = "item", name = "kr-imersium-plate",                       amount = 100 },
-  { type = "item", name = "low-density-structure",                amount = 50 },
-  { type = "item", name = "processing-unit",                      amount = 10 },
-  { type = "item", name = "rocket-fuel",                          amount = 200 }
+  { type = "item", name = "low-density-structure",                   amount = 50 },
+  { type = "item", name = "processing-unit",                         amount = 10 },
+  { type = "item", name = "rocket-fuel",                             amount = 200 }
 }
 
+recipe["shuttle-hull-recipe"].localised_name = { "item-name.shuttle-hull" }
+recipe["shuttle-hull-recipe"].overload_multiplier = 1
+recipe["shuttle-hull-recipe"].order = "a"
 recipe["shuttle-hull-recipe"].ingredients = {
   { type = "item", name = "satellite-battery",         amount = 20 },
   { type = "item", name = "satellite-bus",             amount = 15 },
@@ -221,10 +247,11 @@ recipe["shuttle-hull-recipe"].ingredients = {
   { type = "item", name = "satellite-radar",           amount = 15 },
   { type = "item", name = "satellite-solar-array",     amount = 15 },
   { type = "item", name = "plastic-bar",               amount = 5000 },
-  { type = "item", name = "kr-imersium-plate",            amount = 5000 },
+  { type = "item", name = "kr-imersium-plate",         amount = 5000 },
   { type = "item", name = stone,                       amount = 50000 }
 }
 
+recipe["space-lab-payload"].overload_multiplier = 1
 recipe["space-lab-payload"].ingredients = {
   { type = "item", name = "kr-singularity-lab",        amount = 5 },
   { type = "item", name = "satellite-bus",             amount = 1 },
@@ -234,20 +261,21 @@ recipe["space-lab-payload"].ingredients = {
   { type = "item", name = "satellite-solar-array",     amount = 4 }
 }
 
+recipe["telescope-components"].overload_multiplier = 1
 recipe["telescope-components"].ingredients = {
   { type = "item", name = "kr-advanced-additional-engine-equipment", amount = 50 },
-  { type = "item", name = "kr-singularity-lab",                   amount = 5 },
-  { type = "item", name = "steel-plate",                          amount = 100 },
-  { type = "item", name = "kr-advanced-radar",                    amount = 200 },
-  { type = "item", name = "satellite-flight-computer",            amount = 10 },
-  { type = "item", name = stone,                                  amount = 10000 },
+  { type = "item", name = "kr-singularity-lab",                      amount = 5 },
+  { type = "item", name = "steel-plate",                             amount = 100 },
+  { type = "item", name = "kr-advanced-radar",                       amount = 200 },
+  { type = "item", name = "satellite-flight-computer",               amount = 10 },
+  { type = "item", name = stone,                                     amount = 10000 },
   { type = "item", name = "kr-rare-metals",                          amount = 200 }
 }
 
 recipe["erp-lab"].ingredients = {
-  { type = "item", name = "kr-glass",               amount = 100 },
+  { type = "item", name = "kr-glass",            amount = 100 },
   { type = "item", name = "kr-singularity-lab",  amount = 1 },
   { type = "item", name = "kr-quantum-computer", amount = 10 },
-  { type = "item", name = "kr-ai-core",             amount = 100 },
+  { type = "item", name = "kr-ai-core",          amount = 100 },
   { type = "item", name = "processing-unit",     amount = 200 },
 }
