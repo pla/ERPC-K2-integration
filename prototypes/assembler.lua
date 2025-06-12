@@ -26,6 +26,11 @@ assembler.crafting_categories = { "satellite-crafting" }
 assembler.collision_box = { { -2.3, -2.3 }, { 2.3, 2.3 } }
 assembler.selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } }
 
+assembler.perceived_performance = {
+  minimum = 0.5,
+  maximum = 3.5
+}
+
 assembler.graphics_set = {
   animation = {
     layers = {
